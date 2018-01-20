@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 
+import dagger.android.support.DaggerAppCompatActivity;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
 /**
@@ -16,7 +17,7 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
  * <p>
  * Created by YoKey on 17/6/20.
  */
-public class SupportActivity extends AppCompatActivity implements ISupportActivity {
+public class SupportActivity extends DaggerAppCompatActivity implements ISupportActivity {
     final SupportActivityDelegate mDelegate = new SupportActivityDelegate(this);
 
     @Override

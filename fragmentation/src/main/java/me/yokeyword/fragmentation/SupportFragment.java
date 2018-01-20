@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.animation.Animation;
 
+import dagger.android.support.DaggerFragment;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
 /**
@@ -17,7 +17,7 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
  * {@link android.support.v4.app.Fragment} APIs.
  * Created by YoKey on 17/6/22.
  */
-public class SupportFragment extends Fragment implements ISupportFragment {
+public class SupportFragment extends DaggerFragment implements ISupportFragment {
     final SupportFragmentDelegate mDelegate = new SupportFragmentDelegate(this);
     protected FragmentActivity _mActivity;
 
